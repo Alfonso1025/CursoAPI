@@ -1,17 +1,17 @@
 //importando mongoose
-// const mongoose = require ("mongoose");
-// const uniqueValidator = require("mongoose-unique-validator");
+ const mongoose = require ("mongoose");
+ const uniqueValidator = require("mongoose-unique-validator");
 
-// importando modulo crypto pendiente de instalar
- // const crypto = require("crypto");
+ //importando modulo crypto pendiente de instalar
+  const crypto = require("crypto");
 
-// importando jsonwebtoken pendiente de instalar
+ //importando jsonwebtoken pendiente de instalar     
 
-// const jwt = require("jsonwebtoken");
+ const jwt = require("jsonwebtoken");
 
 //esto no se que sea
-// const secret = require("../config").secret;
-/* 
+const secret = require("../config").secret;
+
 const UsuarioShema = new mongoose.Shema({
     username: {
         type: String,
@@ -69,7 +69,7 @@ UsuariosShema.methods.generarJWT = function(){
 }
 
 mongoose.model("usuario", UsuarioShema);
-*/
+
 
 
 //clase que representa un usuario de la plataforma
