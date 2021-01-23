@@ -4,13 +4,13 @@
 
 class Usuario
 {
-constructor (id, username, nombre, apellido, email, password, ubicacion, telefono, bio, fotos, tipo ){
+constructor ({id, username, nombre, apellido, email, pass, ubicacion, telefono, bio, fotos, tipo}){
  this.id = id;
  this.username= username;
  this.nombre= nombre;
  this.apellido= apellido;
  this.email= email;
- this.password= password;
+ this.pass= pass;
  this.ubicacion= ubicacion;
  this.telefono=telefono;
  this.bio=bio;

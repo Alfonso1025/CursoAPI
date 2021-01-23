@@ -2,17 +2,16 @@ const Usuario = require('../models/Usuario')
 
 const pool = require("../config/db.js");
 
-function crearUsuario(req, res){
+async function crearUsuario(req, res){
 
-    var usuario = new Usuario(req, body)
-    res.status(201).send(usuario)
+    var usuario = new Usuario(req.body)
+    var respuesta = await pool.query('insert into usuarios set?', usuario);
+    res.status(200).send(respuesta);
 }
 
-function obtenerUsuarios(req,res){
-
-    var usuario1= new Usuario(1, "Juan", "Vega", "juan@vega.com")
-    var usuario2 = new Usuario(2, "Monstserrat", "Vega","mon@vega.com")
-    res.send([usuario1, usuario2])
+async function obtenerUsuarios(req,res){
+    var resp2 = await pool.query("select * from usuarios");
+    res.send(resp2)
 }
 
 function modificarUsuario(req, res){
